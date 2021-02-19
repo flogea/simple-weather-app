@@ -33,6 +33,7 @@ body {
     margin: auto;
 }
 
+/* custom input */
 #city {
     background: transparent;
     box-shadow: 10px 10px 10px rgba(136, 99, 143, 50);
