@@ -1,0 +1,1 @@
+document.getElementById('btn_search') = btn_search;

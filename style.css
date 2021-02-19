@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('img/mountain.jpg');
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;  
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 300px;
+    align-items: center;
+    margin: auto;
+}
+
+#city {
+    background: transparent;
+    box-shadow: 10px 10px 10px rgba(136, 99, 143, 50);
+    width: 450px;
+    height: 50px;
+    margin: 10px auto;
+    padding: 0 10px;
+    border: 1px solid #f0abff;
+    border-radius: 50px;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    color: white;
+}
+
+#btn_search {
+    width: 150px;
+    height: 35px;
+    margin: 10px auto;
+    background: linear-gradient( 0.25turn, #8e4fc9, #c94fbf);
+    border: none;
+    border-radius: 50px;
+    font-family: 'Ubuntu Mono';
+    font-size: 20px;
+    color: white;
+}
+
+
