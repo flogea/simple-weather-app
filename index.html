@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Search -->
     <div class="wrap">
         <div class="start">
-            <input type="text" id="city">
+             <input type="text" id="city" class="input_search">
             <button class="submit" id="btn_search">Найти</button>
         </div>
     </div>
+
+    <!-- Weather window -->
+    <div class="wrapper wrap">
+        <div class="city_search">
+            <input type="text" id="city_top" class="input_search">
+            <button class="submit" id="btn_search_top">Найти</button>
+        </div>
+        <div class="today_weather">
+
+        </div>
+        <div class="week_weather">
+            <div class="day" id="tomorrow">
+
+            </div>
+            <div class="day" id="day3">
+
+            </div>
+            <div class="day" id="day4">
+
+            </div>
+            <div class="day" id="day5">
+
+            </div>
+            <div class="day" id="day6">
+
+            </div>
+            <div class="day" id="day7">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<!-- cjmment -->
