@@ -9,6 +9,8 @@ body {
     background-size: cover;
 }
 
+/* Search block stylization */
+
 .wrap {
     position: absolute;
     top: 50%;
@@ -64,6 +66,8 @@ body {
     cursor: pointer;
 }
 
+/* Weather window block stylization */
+
 .wrapper {
     display: none;
     width: 1000px;
@@ -71,8 +75,52 @@ body {
     background: #f0abff;
     border-radius: 50px;
     align-items: center;
+    justify-content: center;
 }
 
 .city_search {
     display: flex;
 }
+
+/* Today weather block stylization */
+
+.today_weather {
+    display: flex;
+    width: 80%;
+    height: 30%;
+
+    background: rgba(0, 0, 0, 0.4) url('img/rain/puddle.gif');
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid white;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+    margin: 0 auto;
+    padding: 3%;
+}
+
+.today_weather .city_name, .today_degrees, .today_weather_conditions, .today_another_inform {
+    color: white;
+    margin: auto auto;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.today_weather .today_weather_conditions, .today_another_inform {
+    width: 25%;
+}
+
+.today_weather .city_name {
+    width: 40%;
+    font-size: 60px;
+    color: white;
+}
+
+.today_weather .today_degrees {
+    width: 10%;
+}
+
+/* Another weather blocks stylization */
