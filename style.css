@@ -32,11 +32,17 @@ body {
 .input_search {
     background: transparent;
     margin: 10px auto;
-    padding: 0 10px;
+    padding: 0 15px;
     border: 1px solid #f0abff;
     border-radius: 50px;
-    font-family: 'Ubuntu';
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
+}
+
+.input_search::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 50;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .input_search#city {
@@ -46,13 +52,6 @@ body {
     font-size: 20px;
 }
 
-.input_search#city_top {
-    width: 300px;
-    height: 35px;
-    font-size: 15px;
-    border-color: #fff;
-}
-
 .submit {
     width: 150px;
     height: 35px;
@@ -60,9 +59,9 @@ body {
     background: linear-gradient( 0.25turn, #8e4fc9, #c94fbf);
     border: none;
     border-radius: 50px;
-    font-family: 'Sans-serif';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    color: white;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -80,6 +79,20 @@ body {
 
 .city_search {
     display: flex;
+    height: 12%;
+}
+
+.input_search#city_top {
+    width: 300px;
+    height: 35px;
+    margin: auto;
+    font-size: 15px;
+    border-color: #fff;
+}
+
+.submit#btn_search_top {
+    height: 35px;
+    margin: auto;
 }
 
 /* Today weather block stylization */
@@ -95,7 +108,7 @@ body {
     background-size: cover;
     background-position: center;
 
-    border: 1px solid white;
+    border:none;
     border-radius: 30px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
@@ -103,14 +116,14 @@ body {
     padding: 3%;
 }
 
-.today_weather .city_name, .today_degrees, .today_weather_conditions, .today_another_inform {
+.today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions, .today_another_inform {
     color: white;
     margin: auto auto;
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.today_weather .today_weather_conditions, .today_another_inform {
-    width: 25%;
+.today_weather .today_date, .today_weather_conditions, .today_another_inform {
+    flex-direction: column;
 }
 
 .today_weather .city_name {
@@ -124,3 +137,21 @@ body {
 }
 
 /* Another weather blocks stylization */
+
+.week_weather {
+    display: flex;
+    width: 85%;
+    height: 35%;
+
+    margin: 4% auto;
+    justify-content: center;
+}
+
+.week_weather .day {
+    width: 22%;
+    height: 100%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
