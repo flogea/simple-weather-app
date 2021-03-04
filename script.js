@@ -1,10 +1,13 @@
 window.onload = function () {
     const keyAPI = '09d9181db657691a7f0679fb629d686f';
     var bg_gif = document.querySelector('.today_weather');
+    var now = new Date();
     document.querySelector('.submit').onclick = btn_search; // Разобраться с классом и id
     const cloudweath = 'img/cloud/cloud.gif';
-    const rainweath = 'img/rain/puddle.gif';
+    const rainweath = 'img/rain/rain.gif';
     const clearweath = 'img/clear/clearSky.gif';
+    const snowweath = 'img/snow/snow.gif';
+    const drizweath = 'img/drizzle/drizzle.gif';
 
     function btn_search () {
         const cityName_inp = document.querySelector('.input_search').value; // Разобраться, можно ли это решить с классом, а не id
@@ -31,6 +34,12 @@ window.onload = function () {
                         case 'Rain':
                             bg_gif.style.background = `rgba(0, 0, 0, 0.4) url(${rainweath})`;
                             break;
+                        case 'Snow':
+                            bg_gif.style.background = `rgba(0, 0, 0, 0.4) url(${snowweath})`;
+                            break;
+                        case 'Drizzle':
+                            bg_gif.style.background = `rgba(0, 0, 0, 0.4) url(${drizweath})`;
+                            break;
                     }
                 })
     
@@ -38,6 +47,19 @@ window.onload = function () {
                 .then(function (resp) {return resp.json() })
                 .then(function (data) {
                     console.log(data);
+                    console.log(now.getFullYear(), now.getMonth(), now.getDate());
+                    console.log(data.list[0].dt_txt)
+                    // if (data.list[4].dt_txt == now.getFullYear(), now.getMonth(), now.getDate() + 1){
+                    //     console.log('true');
+                    // }
+                    // else 
+                    //     console.log('false');
+
+                    for(let i = 0; i <= data.list.length; i++) {
+                        switch (now.getFullYear()) {
+                            case 'data.list[i].dt_txt':
+                        }
+                    }
                 })
         }
         else {
