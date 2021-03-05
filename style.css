@@ -5,6 +5,7 @@
 
 body {
     min-height: 100vh;
+    min-width: 100vw;
     background: url('img/mountain.jpg') no-repeat center;
     background-size: cover;
 }
@@ -37,6 +38,7 @@ body {
     border-radius: 50px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    outline: none;
 }
 
 .input_search::placeholder {
@@ -63,6 +65,13 @@ body {
     font-size: 20px;
     color: #fff;
     cursor: pointer;
+    outline: none;
+}
+
+.submit:hover {
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.2) linear-gradient( 0.25turn, #8e4fc9, #c94fbf);
+    background-blend-mode: overlay;
 }
 
 /* Weather window block stylization */
