@@ -171,3 +171,22 @@ body {
     font-size: 15px;
     color: black;
 }
+
+.week_weather .day img {
+    
+}
+
+.week_weather .date {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 200;
+    color: black;
+    margin: 8%;
+}
+
+.week_weather .degrees {
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: black;
+}

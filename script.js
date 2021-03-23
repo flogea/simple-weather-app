@@ -95,23 +95,36 @@ window.onload = function () {
                         FourDayForecast(1);
                     }
 
+
                     function FourDayForecast(num) {
+
+                        // for (let i = 0; i < data.list.length; i += 8) {
+                        //     switch (data.list[i].weather['0'].icon) {
+                        //         case '01d':
+
+                        //     }
+                        // }
+
                         // Tomorrow weather
+                        document.querySelector('#tomorrow_date').textContent = (data.list[num+2].dt_txt).substr(0, 10);
                         document.querySelector('#tomorrow_morning_temp').innerHTML = '6 AM: ' + Math.round(data.list[num+2].main.temp - 273) + '&deg';
                         document.querySelector('#tomorrow_day_temp').innerHTML = '12 PM: ' + Math.round(data.list[num+4].main.temp - 273) + '&deg';
                         document.querySelector('#tomorrow_evening_temp').innerHTML = '6 PM: ' + Math.round(data.list[num+6].main.temp - 273) + '&deg';
                         
                         // Day 3 weather
+                        document.querySelector('#day3_date').textContent = (data.list[num+10].dt_txt).substr(0, 10);
                         document.querySelector('#day3_morning_temp').innerHTML = '6 AM: ' + Math.round(data.list[num+10].main.temp - 273) + '&deg';
                         document.querySelector('#day3_day_temp').innerHTML = '12 PM: ' + Math.round(data.list[num+12].main.temp - 273) + '&deg';
                         document.querySelector('#day3_evening_temp').innerHTML = '6 PM: ' + Math.round(data.list[num+14].main.temp - 273) + '&deg';
                 
                         // Day 4 weather
+                        document.querySelector('#day4_date').textContent = (data.list[num+18].dt_txt).substr(0, 10);
                         document.querySelector('#day4_morning_temp').innerHTML = '6 AM: ' + Math.round(data.list[num+18].main.temp - 273) + '&deg';
                         document.querySelector('#day4_day_temp').innerHTML = '12 PM: ' + Math.round(data.list[num+20].main.temp - 273) + '&deg';
                         document.querySelector('#day4_evening_temp').innerHTML = '6 PM: ' + Math.round(data.list[num+22].main.temp - 273) + '&deg';
                 
                         // Day 5 weather
+                        document.querySelector('#day5_date').textContent = (data.list[num+26].dt_txt).substr(0, 10);
                         document.querySelector('#day5_morning_temp').innerHTML = '6 AM: ' + Math.round(data.list[num+26].main.temp - 273) + '&deg';
                         document.querySelector('#day5_day_temp').innerHTML = '12 PM: ' + Math.round(data.list[num+28].main.temp - 273) + '&deg';
                         document.querySelector('#day5_evening_temp').innerHTML = '6 PM: ' + Math.round(data.list[num+30].main.temp - 273) + '&deg';
@@ -124,3 +137,13 @@ window.onload = function () {
         }
     }
 }
+
+
+
+
+
+// 01d - sunny
+// 02d - переменная облачнось
+// 03d - облачно
+// 04d - какие-то грозовые тучки
+// 50d - misty
