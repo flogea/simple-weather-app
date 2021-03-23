@@ -67,27 +67,49 @@ window.onload = function () {
                 })
                 .then(function (data) {
                     console.log(data);
-                    //console.log(now.getFullYear(), now.getMonth(), now.getDate());
-                    console.log(data.list[0].dt, 'Date from site');
-                    console.log(now.valueOf().toString().slice(0, 10), 'Today date');
 
-                    if (data.list[0].dt_txt == now) {
-                        console.log('true');
+                    var nowHour = now.getHours();
+                    
+                    if (nowHour >= 00 && nowHour < 03) {
+                        FourDayForecast(9);
                     }
-                    else {
-                        console.log('false');
+                    else if (nowHour >= 03 && nowHour < 06) {
+                        FourDayForecast(10);
+                    }
+                    else if (nowHour >= 06 && nowHour < 09) {
+                        FourDayForecast(11);
+                    }
+                    else if (nowHour >= 09 && nowHour < 12) {
+                        FourDayForecast(12);
+                    }
+                    else if (nowHour >= 12 && nowHour < 15) {
+                        FourDayForecast(13);
+                    }
+                    else if (nowHour >= 15 && nowHour < 18) {
+                        FourDayForecast(14);
+                    }
+                    else if (nowHour >= 18 && nowHour < 21) {
+                        FourDayForecast(15);
+                    }
+                    else if (now.getHours() >= 21 && now.getHours() < 24) {
+                        FourDayForecast(16);
                     }
 
-                    var now_ms = (now.valueOf() + 10800000).toString().slice(0, 10);
-                    for(let i = 0; i < data.list.length; i++) {
-                        if (now_ms < data.list[i].dt) {
-                            console.log(now_ms, 'less');
-                        }
-                        else {
-                            i++;
-                            console.log('complete');
-                        }
+                    function FourDayForecast(num) {
+                        // Tomorrow weather
+                        document.querySelector('#tomorrow_morning_temp').innerHTML = '6 AM: ' + Math.round(data.list[num].main.temp - 273) + '&deg';
+                        document.querySelector('#tomorrow_day_temp').innerHTML = '12 PM: ' + Math.round(data.list[num+2].main.temp - 273) + '&deg';
+                        document.querySelector('#tomorrow_evening_temp').innerHTML = '6 PM: ' + Math.round(data.list[num+4].main.temp - 273) + '&deg';
+                        
+                        // Day 3 weather
+                
+                
+                        // Day 4 weather
+                
+                
+                        // Day 5 weather
                     }
+
                 })
         }
         else {
