@@ -260,7 +260,7 @@ body {
         width: 85vw;
         height: 85vh;
         background: transparent;
-        border: 1px solid white;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
         border-radius: 50px;
         align-items: center;
         justify-content: center;
@@ -302,7 +302,7 @@ body {
     
         border: none;
         border-radius: 30px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: none;
     
         margin: 20% auto 0 auto;
         padding: 3%;
@@ -328,29 +328,27 @@ body {
     /* Another weather blocks stylization */
     
     .week_weather {
-        display: block;
+        display: flexbox;
+        flex-wrap: wrap;
         width: 85%;
-        height: 10%;
-    
-        justify-content: center;
+        height: 45%;
+        justify-content: space-between;
     }
     
     .week_weather .day {
-        width: 100%;
-        height: 100%;
+        width: 46%;
+        height: 46%;
         border: none;
         border-radius: 15px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
         text-align: center;
+        margin: auto 0;
+        overflow: hidden;
     
         font-family: 'Poppins';
         font-size: 15px;
         color: black;
     }
-    
-    /* .week_weather .day img {
-        
-    } */
     
     .week_weather .date {
         font-size: 20px;
@@ -360,6 +358,7 @@ body {
     }
     
     .week_weather .degrees {
+        height: 50%;
         font-size: 15px;
         font-family: 'Poppins';
         font-weight: 400;
