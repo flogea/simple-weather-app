@@ -127,7 +127,7 @@ body {
     padding: 3%;
 }
 
-.today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions, .today_another_inform {
+/* .today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions, .today_another_inform {
     color: white;
     margin: auto auto;
     font-family:Arial, Helvetica, sans-serif;
@@ -145,7 +145,7 @@ body {
 
 .today_weather .today_degrees {
     width: 10%;
-}
+} */
 
 /* Another weather blocks stylization */
 
@@ -290,11 +290,12 @@ body {
     /* Today weather block stylization */
     
     .today_weather {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         width: 80%;
         height: 30%;
     
-        background: rgba(0, 0, 0, 0.4) url('img/rain/puddle.gif');
+        background: rgba(0, 0, 0, 0.4) url('');
         background-blend-mode: overlay;
         background-repeat: no-repeat !important;
         background-size: cover !important;
@@ -304,31 +305,24 @@ body {
         border-radius: 30px;
         box-shadow: none;
     
-        margin: 20% auto 0 auto;
-        padding: 3%;
+        margin: 0 auto;
     }
     
-    .today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions, .today_another_inform {
+    .today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions {
+        width: 46% !important;
+        height: 46%;
+        border: 1px solid black;
         color: white;
-        margin: auto 10%;
-        font-family:Arial, Helvetica, sans-serif;
-    }
-    
-    .today_weather .city_name {
-        width: 90%;
-        font-size: 60px;
-        color: white;
-    }
-    
-    .today_weather .today_degrees, .today_weather_conditions, .today_another_inform {
-        width: 80%;
-        margin: 5% auto;
+        font-size: 20px;
+        font-family: 'Poppins';
+        text-align: center;
+        margin: auto;
     }
 
     /* Another weather blocks stylization */
     
     .week_weather {
-        display: flexbox;
+        display: flex;
         flex-wrap: wrap;
         width: 85%;
         height: 45%;
