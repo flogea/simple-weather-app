@@ -352,10 +352,15 @@ body {
     }
     
     .week_weather .degrees {
-        height: 50%;
+        display: flex;
         font-size: 15px;
         font-family: 'Poppins';
         font-weight: 400;
         color: black;
+        margin-top: 15%;
+    }
+
+    .week_weather img {
+        display: none;
     }
 }
