@@ -98,6 +98,9 @@ window.onload = function () {
 
                     function FourDayForecast(num) {
 
+                        //Today weather
+                        document.querySelector('.today_date').textContent = (data.list[0].dt_txt).substr(0, 10);
+
                         // Tomorrow weather
                         document.querySelector('#tomorrow_date').textContent = (data.list[num+2].dt_txt).substr(0, 10);
                         document.querySelector('#tomorrow_morning_temp').innerHTML = '6:00 ' + Math.round(data.list[num+2].main.temp - 273) + '&deg';

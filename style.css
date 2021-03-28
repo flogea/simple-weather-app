@@ -113,7 +113,7 @@ body {
     width: 80%;
     height: 30%;
 
-    background: rgba(0, 0, 0, 0.4) url('img/rain/puddle.gif');
+    background: rgba(0, 0, 0, 0.4) url('');
     background-blend-mode: overlay;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -167,7 +167,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     text-align: center;
 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
     font-size: 15px;
     color: black;
 }
@@ -259,7 +259,7 @@ body {
         display: none;
         width: 85vw;
         height: 85vh;
-        background: transparent;
+        background: rgba(0, 0, 0, 0.4);
         box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
         border-radius: 50px;
         align-items: center;
@@ -290,41 +290,40 @@ body {
     /* Today weather block stylization */
     
     .today_weather {
-        display: flex;
         flex-wrap: wrap;
-        width: 80%;
-        height: 30%;
-    
-        background: rgba(0, 0, 0, 0.4) url('');
-        background-blend-mode: overlay;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        background-position: center !important;
-    
-        border: none;
-        border-radius: 30px;
         box-shadow: none;
-    
-        margin: 0 auto;
     }
     
     .today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions {
-        width: 46% !important;
+        width: 46%;
         height: 46%;
         border: 1px solid black;
         color: white;
-        font-size: 20px;
         font-family: 'Poppins';
-        text-align: center;
         margin: auto;
+    }
+
+    .today_weather .city_name, .today_date {
+        width: 96%;
+        height: 20%;
+    }
+
+    .today_weather .city_name {
+        font-size: 25px;
+    }
+
+    .today_weather .today_date {
+        font-size: 15px;
+    }
+
+    .today_weather .today_degrees {
+        
     }
 
     /* Another weather blocks stylization */
     
     .week_weather {
-        display: flex;
         flex-wrap: wrap;
-        width: 85%;
         height: 45%;
         justify-content: space-between;
     }
@@ -332,32 +331,39 @@ body {
     .week_weather .day {
         width: 46%;
         height: 46%;
-        border: none;
-        border-radius: 15px;
-        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
+        box-shadow: none;
         margin: auto 0;
         overflow: hidden;
-    
-        font-family: 'Poppins';
-        font-size: 15px;
-        color: black;
+    }
+
+    .week_weather .day#tomorrow {
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .week_weather .day#day3 {
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .week_weather .day#day4 {
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .week_weather .day#day5 {
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
     
     .week_weather .date {
-        font-size: 20px;
-        font-family: 'Poppins';
-        font-weight: 200;
-        color: black;
+        color: white;
     }
     
     .week_weather .degrees {
         display: flex;
-        font-size: 15px;
-        font-family: 'Poppins';
-        font-weight: 400;
-        color: black;
         margin-top: 15%;
+        color: white;
     }
 
     .week_weather img {
