@@ -127,25 +127,7 @@ body {
     padding: 3%;
 }
 
-/* .today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions, .today_another_inform {
-    color: white;
-    margin: auto auto;
-    font-family:Arial, Helvetica, sans-serif;
-}
 
-.today_weather .today_date, .today_weather_conditions, .today_another_inform {
-    flex-direction: column;
-}
-
-.today_weather .city_name {
-    width: 40%;
-    font-size: 60px;
-    color: white;
-}
-
-.today_weather .today_degrees {
-    width: 10%;
-} */
 
 /* Another weather blocks stylization */
 
@@ -177,9 +159,9 @@ body {
 } */
 
 .week_weather .date {
-    font-size: 20px;
+    font-size: 115%;
     font-family: 'Poppins';
-    font-weight: 200;
+    font-weight: 400;
     color: black;
     margin: 8%;
 }
@@ -187,7 +169,7 @@ body {
 .week_weather .degrees {
     font-size: 15px;
     font-family: 'Poppins';
-    font-weight: 400;
+    font-weight: 200;
     color: black;
 }
 
@@ -267,23 +249,19 @@ body {
     }
     
     .city_search {
-        display: flex;
+        width: 80%;
         height: 15%;
-        float: left;
-        margin: 0 7%;
+        float: none;
+        margin: 0 auto;
     }
     
     .input_search#city_top {
-        width: 50vw;
-        height: 35px;
-        margin: auto 5%;
-        font-size: 15px;
-        border-color: #fff;
+        width: 48vw;
+        margin: auto;
     }
     
     .submit#btn_search_top {
         width: 35px;
-        height: 35px;
         margin: auto;
     }
 
@@ -296,8 +274,6 @@ body {
     
     .today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions {
         width: 46%;
-        height: 46%;
-        border: 1px solid black;
         color: white;
         font-family: 'Poppins';
         margin: auto;
@@ -316,8 +292,8 @@ body {
         font-size: 15px;
     }
 
-    .today_weather .today_degrees {
-        
+    .today_weather .today_weather_conditions {
+        text-align: center;
     }
 
     /* Another weather blocks stylization */
@@ -331,6 +307,7 @@ body {
     .week_weather .day {
         width: 46%;
         height: 46%;
+        background: rgba(0, 0, 0, 0.1);
         box-shadow: none;
         margin: auto 0;
         overflow: hidden;
@@ -362,6 +339,7 @@ body {
     
     .week_weather .degrees {
         display: flex;
+        font-size: 100%;
         margin-top: 15%;
         color: white;
     }
