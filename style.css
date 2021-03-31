@@ -156,10 +156,6 @@ body {
     color: black;
 }
 
-/* .week_weather .day img {
-    
-} */
-
 .week_weather .date {
     font-size: 115%;
     font-family: 'Poppins';
@@ -209,26 +205,27 @@ body {
     .input_search::placeholder {
         font-family: 'Poppins';
         font-weight: 200;
+        font-size: 2.5vh;
         color: rgba(255, 255, 255, 0.5);
     }
 
     .input_search#city {
         box-shadow: 10px 10px 10px rgba(136, 99, 143, 0.5);
-        width: 95%;
-        height: 50px;
-        font-size: 20px;
+        width: 90%;
+        height: 6vh;
+        font-size: 2.5vh;
     }
 
     .submit {
-        width: 150px;
-        height: 40px;
+        width: 35vw;
+        height: 6vh;
         margin: 10px auto;
         background: linear-gradient( 0.25turn, #8e4fc9, #c94fbf);
         border: none;
         border-radius: 50px;
         font-family: 'Poppins';
         font-weight: 200;
-        font-size: 20px;
+        font-size: 2.5vh;
         color: #fff;
         cursor: pointer;
         outline: none;
@@ -258,12 +255,12 @@ body {
     }
     
     .input_search#city_top {
-        width: 48vw;
+        width: 47vw;
         margin: auto;
     }
     
     .submit#btn_search_top {
-        width: 35px;
+        width: 10vw;
         margin: auto;
     }
 
@@ -287,11 +284,11 @@ body {
     }
 
     .today_weather .city_name {
-        font-size: 25px;
+        font-size: 4vh;
     }
 
-    .today_weather .today_date {
-        font-size: 15px;
+    .today_weather .today_date, .today_degrees, .today_weather_conditions {
+        font-size: 2.5vh;
     }
 
     .today_weather .today_weather_conditions {
@@ -303,7 +300,7 @@ body {
     .week_weather {
         flex-wrap: wrap;
         height: 45%;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     
     .week_weather .day {
@@ -337,11 +334,12 @@ body {
     
     .week_weather .date {
         color: white;
+        font-size: 2.3vh;
     }
     
     .week_weather .degrees {
         display: flex;
-        font-size: 100%;
+        font-size: 2.1vh;
         margin-top: 15%;
         color: white;
     }
@@ -395,7 +393,7 @@ body {
     .input_search#city_top {
         width: 50vw;
         height: 5vh;
-        font-size: 25px;
+        font-size: 2.5vh;
         margin: auto;
     }
     
@@ -403,6 +401,7 @@ body {
         width: 15vw;
         height: 5vh;
         margin: auto;
+        font-size: 2.5vh;
     }
 
     /* Today weather block stylization */
