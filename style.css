@@ -36,14 +36,15 @@ body {
     padding: 0 15px;
     border: 1px solid #f0abff;
     border-radius: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
+    font-weight: 200;
     color: white;
     outline: none;
 }
 
 .input_search::placeholder {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 50;
+    font-family: 'Poppins';
+    font-weight: 200;
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -61,7 +62,8 @@ body {
     background: linear-gradient( 0.25turn, #8e4fc9, #c94fbf);
     border: none;
     border-radius: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
+    font-weight: 200;
     font-size: 20px;
     color: #fff;
     cursor: pointer;
@@ -341,6 +343,146 @@ body {
         display: flex;
         font-size: 100%;
         margin-top: 15%;
+        color: white;
+    }
+
+    .week_weather img {
+        display: none;
+    }
+}
+
+@media all and (min-width: 480px) {
+
+    .start {
+        width: 60vw;
+    }
+
+    .input_search {
+        margin: 20px auto;
+        border-radius: 50px;
+    }
+
+    .input_search::placeholder {
+        font-size: 2.5vh;
+    }
+
+    .input_search#city {
+        width: 95%;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .submit {
+        width: 20vw;
+        height: 50px;
+        font-size: 25px;
+        transition: all ease 1s;
+    }
+    .wrapper {
+        width: 85vw;
+        height: 85vh;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .city_search {
+        width: 85%;
+        height: 13%;
+        float: none;
+        margin: 0 auto;
+    }
+    
+    .input_search#city_top {
+        width: 50vw;
+        height: 5vh;
+        font-size: 25px;
+        margin: auto;
+    }
+    
+    .submit#btn_search_top {
+        width: 15vw;
+        height: 5vh;
+        margin: auto;
+    }
+
+    /* Today weather block stylization */
+    
+    .today_weather {
+        flex-wrap: wrap;
+        box-shadow: none;
+    }
+    
+    .today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions {
+        width: 46%;
+        color: white;
+        font-family: 'Poppins';
+        margin: auto;
+    }
+
+    .today_weather .city_name, .today_date {
+        width: 96%;
+        height: 20%;
+    }
+
+    .today_weather .city_name {
+        font-size: 5vh;
+    }
+
+    .today_weather .today_date, .today_degrees, .today_weather_conditions {
+        font-size: 2.8vh;
+    }
+
+    .today_weather .today_weather_conditions {
+        text-align: center;
+    }
+
+    /* Another weather blocks stylization */
+    
+    .week_weather {
+        flex-wrap: wrap;
+        height: 45%;
+        justify-content: space-around;
+    }
+    
+    .week_weather .day {
+        width: 46%;
+        height: 46%;
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        margin: auto 0;
+        overflow: hidden;
+    }
+
+    .week_weather .day#tomorrow {
+        border-right: 3px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .week_weather .day#day3 {
+        border-left: 3px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .week_weather .day#day4 {
+        border-right: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .week_weather .day#day5 {
+        border-left: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .week_weather .date {
+        font-size: 3vh;
+        font-weight: 200;
+        color: white;
+    }
+    
+    .week_weather .degrees {
+        display: flex;
+        font-size: 2.5vh;
+        margin-top: 8%;
         color: white;
     }
 
