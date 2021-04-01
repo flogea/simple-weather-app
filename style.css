@@ -22,8 +22,8 @@ body {
 .start {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 300px;
+    width: 50vw;
+    height: 40vh;
     margin: auto;
     align-items: center;
     align-content: center; 
@@ -50,21 +50,21 @@ body {
 
 .input_search#city {
     box-shadow: 10px 10px 10px rgba(136, 99, 143, 50);
-    width: 450px;
-    height: 50px;
-    font-size: 20px;
+    width: 33vw;
+    height: 7.5vh;
+    font-size: 3vh;
 }
 
 .submit {
-    width: 150px;
-    height: 35px;
+    width: 13vw;
+    height: 6vh;
     margin: 10px auto;
     background: linear-gradient( 0.25turn, #8e4fc9, #c94fbf);
     border: none;
     border-radius: 50px;
     font-family: 'Poppins';
     font-weight: 200;
-    font-size: 20px;
+    font-size: 3vh;
     color: #fff;
     cursor: pointer;
     outline: none;
@@ -80,9 +80,10 @@ body {
 
 .wrapper {
     display: none;
-    width: 1000px;
-    height: 600px;
-    background: #f0abff;
+    width: 80vw;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
     border-radius: 50px;
     align-items: center;
     justify-content: center;
@@ -90,21 +91,21 @@ body {
 
 .city_search {
     display: flex;
-    height: 12%;
+    height: 15%;
     float: right;
     margin: 0 7%;
 }
 
 .input_search#city_top {
-    width: 300px;
-    height: 35px;
+    width: 30vw;
+    height: 5.5vh;
     margin: auto 3%;
-    font-size: 15px;
+    font-size: 2.5vh;
     border-color: #fff;
 }
 
 .submit#btn_search_top {
-    height: 35px;
+    height: 5.5vh;
     margin: auto 1%;
 }
 
@@ -112,6 +113,7 @@ body {
 
 .today_weather {
     display: flex;
+    flex-wrap: wrap;
     width: 80%;
     height: 30%;
 
@@ -121,15 +123,31 @@ body {
     background-size: cover !important;
     background-position: center !important;
 
-    border:none;
+    border: none;
     border-radius: 30px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
     margin: 0 auto;
     padding: 3%;
+    justify-content: center;
 }
 
+.today_weather .city_name, .today_date, .today_degrees, .today_weather_conditions {
+    width: 45%;
+    height: 50%;
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-size: 2.5vh;
+    color: white;
+}
 
+.today_weather .city_name {
+    font-size: 8vh;
+}
+
+.today_weather .today_degrees, .today_weather_conditions {
+    text-align: center;
+    margin-top: 2%;
+}
 
 /* Another weather blocks stylization */
 
@@ -138,7 +156,8 @@ body {
     width: 85%;
     height: 35%;
 
-    margin: 4% auto;
+    margin: auto;
+    padding: 2.5%;
     justify-content: center;
 }
 
@@ -148,27 +167,27 @@ body {
     margin: 0 auto;
     border: none;
     border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 
     font-family: 'Poppins';
-    font-size: 15px;
-    color: black;
+    color: white;
 }
 
 .week_weather .date {
-    font-size: 115%;
+    font-size: 3vh;
     font-family: 'Poppins';
     font-weight: 400;
-    color: black;
+    color: white;
     margin: 8%;
 }
 
 .week_weather .degrees {
-    font-size: 15px;
+    font-size: 2.5vh;
     font-family: 'Poppins';
     font-weight: 200;
-    color: black;
+    color: white;
 }
 
 @media all and (max-width: 480px) {
@@ -349,7 +368,7 @@ body {
     }
 }
 
-@media all and (min-width: 480px) {
+@media all and (min-width: 480px) and (max-width: 1024px) {
 
     .start {
         width: 60vw;
@@ -361,19 +380,19 @@ body {
     }
 
     .input_search::placeholder {
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 
     .input_search#city {
         width: 95%;
         height: 60px;
-        font-size: 25px;
+        font-size: 2vh;
     }
 
     .submit {
         width: 20vw;
         height: 50px;
-        font-size: 25px;
+        font-size: 2vh;
         transition: all ease 1s;
     }
     .wrapper {
